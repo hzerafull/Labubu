@@ -87,7 +87,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 📞 Contato
 
 **Desenvolvedor:** Heitor.
-- GitHub: [hzerafull]([https://github.com/seu-usuario](https://github.com/hzerafull)
+- GitHub: [hzerafull](https://github.com/hzerafull)
 - Email: heitoraquinogoias@gmail.com
 
 **Instituição:** Instituto Federal de Goiás (IFG)
