@@ -86,9 +86,9 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 📞 Contato
 
-**Desenvolvedor:** [Seu Nome]
-- GitHub: [@seu-usuario](https://github.com/seu-usuario)
-- Email: seu.email@exemplo.com
+**Desenvolvedor:** Heitor.
+- GitHub: [hzerafull]([https://github.com/seu-usuario](https://github.com/hzerafull)
+- Email: heitoraquinogoias@gmail.com
 
 **Instituição:** Instituto Federal de Goiás (IFG)
 **Disciplina:** Projeto de Games - Áudio e Vídeo
