@@ -1,28 +1,35 @@
+
+
+
+
+
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" 
           content="width=device-width, initial-scale=1.0">
-    
+
     <title>Jogo de Adivinhação - IFG 2º Áudio e Vídeo</title>
+
     <style>
 
-      .corpoDaPagina {
-          font-family: Arial, sans-serif;
+      .corpo_da_pagina {
+ 	        font-family: Arial, sans-serif;
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background-color: #3E3D42;
+          background-color: #f4f4f4;
           margin: 0;
+
       }
 
-      .container{
+      .container {
         text-align: center;
-        background-color: #FAFAFA;
+        background-color: rgb(255, 255, 255);
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(145, 31, 0, 0.4);
+        box-shadow: 0px 0px 10px rgba(red, green, blue, alpha);
       }
 
       button {
@@ -32,27 +39,33 @@
         cursor: pointer;
         border-radius: 5px;
         color: #ffffff;
-        background-color: #28a745;
+        background-color: rgb(255, 0, 234);
+      }
+
+      h1 {
+        color: #333;
+      }
+
+      input[type="number"]{
+        padding: 10px;
+        font-size: 16px;
+        width: 50px;
+        margin-bottom:10px;
       }
 
     </style>
-  </head>
 
-  <body class="corpoDaPagina" >
-     
+  </head>
+  <body class="corpo_da_pagina">
+
     <div class="container">
+
       <h1>Jogo de Adivinhação</h1>
       <p>Tente adivinhar o número secreto entre 1 e 100</p>
       <input type="number" id="NMPalpite" min="1" max="100"/>
-      <button id="BTNAdivinhar"> Adivinhar </button>
+      <button id="BTNAdvinhar">Advinhar</button>
+
     </div>
 
-
-
-
-
-
-
-    
-  </body>
+  </body>      
 </html>
