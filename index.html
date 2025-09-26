@@ -1,3 +1,5 @@
+
+
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
@@ -7,76 +9,63 @@
     <title>Jogo de Adivinhação - IFG 2º Áudio e Vídeo</title>
 
     <style>
+
       .corpo_da_pagina {
  	        font-family: Arial, sans-serif;
           display: flex;
           justify-content: center;
           align-items: center;
           height: 100vh;
-          background: linear-gradient(135deg, #1e1e2f, #2a2a40);
+          background-color: #eef1f6;
           margin: 0;
+
       }
 
       .container {
         text-align: center;
-        background-color: #2f2f3d;
-        padding: 25px;
-        border-radius: 15px;
-        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
-      }
-
-      h1 {
-        color: #f0f0f0;
-        margin-bottom: 10px;
-      }
-
-      p {
-        color: #cccccc;
-        margin-bottom: 20px;
-      }
-
-      input[type="number"] {
-        padding: 10px;
-        font-size: 16px;
-        width: 80px;
-        margin-bottom: 15px;
-        border: 1px solid #444;
-        border-radius: 8px;
-        background-color: #1e1e2f;
-        color: #f0f0f0;
-        text-align: center;
-        outline: none;
-        transition: border 0.3s ease, box-shadow 0.3s ease;
-      }
-
-      input[type="number"]:focus {
-        border-color: #7f5af0;
-        box-shadow: 0 0 6px rgba(127, 90, 240, 0.6);
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
       }
 
       button {
-        padding: 12px 24px;
+        padding: 10px 20px;
         border: none;
         font-size: 16px;
         cursor: pointer;
-        border-radius: 8px;
+        border-radius: 5px;
         color: #ffffff;
-        background: linear-gradient(135deg, rgb(255, 0, 234), #7f5af0);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        background-color: #007bff;
       }
 
-      button:hover {
-        transform: scale(1.05);
-        box-shadow: 0 4px 12px rgba(127, 90, 240, 0.4);
+      h1 {
+        color: #222; 
       }
+
+      input[type="number"]{
+        padding: 10px;
+        font-size: 16px;
+        width: 50px;
+        margin-bottom:10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        color: #333;
+      }
+
     </style>
+
   </head>
   <body class="corpo_da_pagina">
+
     <div class="container">
+
       <h1>Jogo de Adivinhação</h1>
       <p>Tente adivinhar o número secreto entre 1 e 100</p>
       <input type="number" id="NMPalpite" min="1" max="100"/>
       <button id="BTNAdvinhar">Advinhar</button>
+
     </div>
+
   </body>      
 </html>
