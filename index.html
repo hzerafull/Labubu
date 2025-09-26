@@ -1,49 +1,58 @@
 <html lang="pt-BR">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    
     <title>Jogo de Adivinhação - IFG 2º Áudio e Vídeo</title>
     <style>
+
       .corpoDaPagina {
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: #2E2E31;
-        margin: 0;
+          font-family: Arial, sans-serif;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-color: #f4f4f4;
+          margin: 0;
       }
 
-      .container {
+      .container{
         text-align: center;
-        background-color: #FAFAFA;
+        background-color: #ffffff;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.5); 
+        box-shadow: 0px 0px 10px rgba(145, 31, 0, 0.4);
       }
 
-      .botaoAdviinhar {
-        padding: 7px 12px;
+      .botaoAdivinar {
+        padding: 10px 20px;
         border: none;
         font-size: 16px;
         cursor: pointer;
         border-radius: 5px;
         color: #ffffff;
         background-color: #28a745;
-         box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5);
       }
+
     </style>
   </head>
 
-  <body class="corpoDaPagina">
-    <div class="corpoDaPagina">
-      <div class="container">
-        <h1>Jogo de Adivinhação</h1>
-        <p>Tente adivinhar o número secreto entre 1 e 100</p>
-        <input type="number" id="NMPalpite" min="1" max="100" />
-        <button class="botaoAdviinhar" id="BTNadivinhar">Adivinhar</button>
-      </div>
+  <body class="corpoDaPagina" >
+     
+    <div class="container">
+      <h1>Jogo de Adivinhação</h1>
+      <p>Tente adivinhar o número secreto entre 1 e 100</p>
+      <input type="number" id="NMPalpite" min="1" max="100"/>
+      <button id="BTNAdivinhar"> Adivinhar </button>
     </div>
+
+
+
+
+
+
+
+    
   </body>
 </html>
