@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+
+
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8">
@@ -26,7 +27,6 @@
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
-        width: 300px; /* Adicionado para melhor visualização */
       }
 
       button {
@@ -37,8 +37,7 @@
         border-radius: 10px;
         color: #ffffff;
         background-color: #7f5af0;
-        transition: background-color 0.3s ease;
-        margin-top: 10px; /* Adicionado para espaçamento */
+         transition: background-color 0.3s ease;
       }
 
       button:hover { 
@@ -62,15 +61,7 @@
         background-color: #1e1e2f;
         color: #f0f0f0;
         border: 1px solid #444;
-        border-radius: 5px;
-        text-align: center;
-      }
-      
-      .resultado {
-          margin-top: 20px;
-          color: #f0f0f0;
-          font-size: 18px;
-          min-height: 40px; /* Para manter o espaço reservado */
+
       }
 
     </style>
@@ -85,106 +76,34 @@
 
 
       <input type="number" id="NMPalpite" min="1" max="100"/>
-      
-      <button id="BTNAdvinhar" onclick="verificarPalpite()"> 
-        Adivinhar 
-      </button>
-
-      <div class="resultado" id="resultadoMensagem">
-          </div>
-      
-      <button id="BTNReiniciar" onclick="reiniciarJogo()" style="display: none;">
-          Novo Jogo
-      </button>
+      <button id="BTNAdvinhar" 
+      onmouseover="escurecerBotao()"
+      onmouseout="voltar"
+      onclick="verificarPalpite()"> 
+      Advinhar 
+    </button>
 
     </div>
 
 
     <script>
-      // 1. Variáveis Globais
-      let numeroSecreto = Math.floor(Math.random() * 100) + 1; // Gera número entre 1 e 100
-      let tentativas = 0;
-      let jogoAtivo = true;
 
-      // 2. Referências aos Elementos HTML
-      const inputPalpite = document.getElementById('NMPalpite');
-      const btnAdvinhar = document.getElementById('BTNAdvinhar');
-      const btnReiniciar = document.getElementById('BTNReiniciar');
-      const resultadoMensagem = document.getElementById('resultadoMensagem');
+    function escurecerBotao(){
+    var botao_adivinhar = document.getElementById('BTNAdvinhar'); 
+    botao_adivinhar.style.backgroundColor = "#BCE4F5"
+    }
 
-      // 3. Função Principal: Verificar o Palpite
-      function verificarPalpite() {
-          if (!jogoAtivo) {
-              return; // Sai da função se o jogo já terminou
-          }
-          
-          const palpite = parseInt(inputPalpite.value);
-          
-          // Validação básica do input
-          if (isNaN(palpite) || palpite < 1 || palpite > 100) {
-              resultadoMensagem.textContent = 'Por favor, insira um número válido entre 1 e 100.';
-              resultadoMensagem.style.color = '#ff6b6b'; // Vermelho
-              inputPalpite.value = ''; // Limpa o campo
-              return;
-          }
-
-          tentativas++;
-          
-          if (palpite === numeroSecreto) {
-              // Acertou
-              resultadoMensagem.textContent = `🎉 Parabéns! Você acertou o número ${numeroSecreto} em ${tentativas} tentativa(s)!`;
-              resultadoMensagem.style.color = '#7f5af0'; // Roxo
-              finalizarJogo(true);
-              
-          } else if (palpite < numeroSecreto) {
-              // Palpite muito baixo
-              resultadoMensagem.textContent = `Ainda não. Tente um número MAIOR.`;
-              resultadoMensagem.style.color = '#ffcc00'; // Amarelo
-              
-          } else {
-              // Palpite muito alto
-              resultadoMensagem.textContent = `Ainda não. Tente um número MENOR.`;
-              resultadoMensagem.style.color = '#ffcc00'; // Amarelo
-          }
-
-          // Limpa o input para a próxima tentativa
-          inputPalpite.value = '';
-          inputPalpite.focus(); // Coloca o foco de volta no campo
-      }
-
-      // 4. Função para Finalizar o Jogo
-      function finalizarJogo(vitoria) {
-          jogoAtivo = false;
-          inputPalpite.disabled = true; // Desabilita o campo de input
-          btnAdvinhar.style.display = 'none'; // Esconde o botão 'Adivinhar'
-          btnReiniciar.style.display = 'block'; // Mostra o botão 'Novo Jogo'
-      }
-
-      // 5. Função para Reiniciar o Jogo
-      function reiniciarJogo() {
-          // Reseta variáveis
-          numeroSecreto = Math.floor(Math.random() * 100) + 1;
-          tentativas = 0;
-          jogoAtivo = true;
-          
-          // Reseta a interface
-          inputPalpite.value = '';
-          inputPalpite.disabled = false;
-          resultadoMensagem.textContent = 'Novo jogo iniciado! Tente adivinhar o número secreto entre 1 e 100.';
-          resultadoMensagem.style.color = '#cccccc';
-          btnReiniciar.style.display = 'none';
-          btnAdvinhar.style.display = 'block';
-          inputPalpite.focus();
-      }
-
-      // Inicia o jogo com a mensagem inicial ao carregar
-      resultadoMensagem.textContent = 'Digite seu primeiro palpite e clique em Adivinhar!';
+      function verificarPalpite(){
       
-      /* NOTA: A função escurecerBotao() foi removida pois o efeito de hover
-         do CSS é suficiente e mais limpo.
-      */
+
+     alert('Bem-vindo ao Jogo de Adivinhação! Tente adivinhar o número secreto entre 1 e 100. Boa sorte!');
+      }
       
-    </script>
+      
+      
+      
+      
+      </script>
     
 
   </body>      
