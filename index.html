@@ -78,7 +78,7 @@
       <input type="number" id="NMPalpite" min="1" max="100"/>
       <button id="BTNAdvinhar" 
       onmouseover="escurecerBotao()"
-      onmouseout="voltar"
+      onmouseout="voltarCorOriginalBotao"
       onclick="verificarPalpite()"> 
       Advinhar 
     </button>
@@ -87,7 +87,7 @@
 
 
     <script>
-    function voltarCorOriginalBOtao(){
+    function voltarCorOriginalBotao(){
        var botao_adivinhar = document.getElementById('BTNAdvinhar'); 
        botao_adivinhar.style.backgroundColor = "#7f5af0"
 
