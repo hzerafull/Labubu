@@ -6,7 +6,6 @@
     
     <title>Jogo de Adivinhação - IFG 2º Áudio e Vídeo</title>
     <style>
-      /* ... O CSS permaneceu inalterado ... */
       .corpoDaPagina {
           font-family: Arial, sans-serif;
           display: flex;
@@ -77,7 +76,6 @@
          var caixa_texto = document.getElementById('NMPalpite');
         var botao_adivinhar = document.getElementById('BTNAdivinhar');
         botao_adivinhar.disabled = true;
-        // CORREÇÃO 1: Propriedade correta para desabilitar input
         caixa_texto.disabled = true; 
 
         botao_adivinhar.style.backgroundColor =  '#DCDCDC';
@@ -103,12 +101,11 @@
 
       function verificarPalpite(){
          var caixa_texto = document.getElementById('NMPalpite');
-         // CORREÇÃO 2: Declaração do botão dentro da função para garantir seu escopo e referência
          var botao_adivinhar = document.getElementById('BTNAdivinhar'); 
          
-         // A execução da lógica só deve ocorrer se o botão NÃO estiver desabilitado
+    
          if(botao_adivinhar.disabled == false){
-            // Reverte a cor para o padrão (caso tenha saído do hover)
+    
             botao_adivinhar.style.backgroundColor = '#28a745';
             
             var div_mensagem = document.getElementById('DIVMensagem');
@@ -134,16 +131,23 @@
             
             if(chuteDoJogador == numeroSecreto){
                 div_mensagem.textContent = "Você acertou!";
+            }else if(qtdTentativas> 0){
+
+              if(chuteDoJogador > numeroSecreto){ 
+                "Errado o número secreto é menor, você tem"+qtdTentativas" tentativas restantes";
+              }else{
+                 "Errado o número secreto é maior, você tem"+qtdTentativas" tentativas restantes";
+
             }else{
-                div_mensagem.textContent = "Você errou!";
+              div_mensagem.textContent = "Fim de jogo! O número secreto era "+numeroSecreto
+               desabilitarJogo();
+
+          
             }
 
-            if(qtdTentativas == 0){
-                desabilitarJogo();
-                div_mensagem.textContent = "Fim de jogo! O número secreto era "+numeroSecreto;
+
             }
-         } // Fim do if(botao_adivinhar.disabled == false)
-          
+     
       }
 
     </script>
